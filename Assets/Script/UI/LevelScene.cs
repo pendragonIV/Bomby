@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelScene : MonoBehaviour
@@ -61,11 +59,11 @@ public class LevelScene : MonoBehaviour
     {
         Transform achivementContainer = holder.GetChild(0);
 
-        for(int i = 0; i < 3; i++)
+        for (int i = 0; i < 3; i++)
         {
-            if(i < levelData.achivement)
+            if (i < levelData.achivement)
             {
-                Transform starDisabler = achivementContainer.GetChild(i).GetChild(0); 
+                Transform starDisabler = achivementContainer.GetChild(i).GetChild(0);
                 starDisabler.gameObject.SetActive(false);
             }
         }

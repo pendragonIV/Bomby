@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.WSA;
 
 public class HolderController : MonoBehaviour
 {
@@ -14,7 +11,7 @@ public class HolderController : MonoBehaviour
 
     private void Awake()
     {
-        if(instance != this && instance != null)
+        if (instance != this && instance != null)
         {
             Destroy(gameObject);
         }
@@ -30,7 +27,7 @@ public class HolderController : MonoBehaviour
         holder.name = holderName;
         Text objLeft = holder.GetChild(0).GetComponent<Text>();
         Image objImage = holder.GetChild(1).GetComponent<Image>();
-        SetHolderIn4(holder, objLeft, objImage, spawnObj,numberOfObj);
+        SetHolderIn4(holder, objLeft, objImage, spawnObj, numberOfObj);
     }
 
     private void SetHolderIn4(Transform holder, Text objLeft, Image objImage, GameObject spawnObj, int numberOfObj)

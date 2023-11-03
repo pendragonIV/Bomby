@@ -16,46 +16,46 @@ MonoBehaviour:
   - objects:
     - spawnObject: {fileID: 1102256822763534515, guid: 2c9ac2ac2889dc04ca6829a53384077a, type: 3}
       quantity: 1
-    isCompleted: 1
+    isCompleted: 0
     isPlayable: 1
-    achivement: 3
+    achivement: 0
   - objects:
     - spawnObject: {fileID: 1102256822763534515, guid: 2c9ac2ac2889dc04ca6829a53384077a, type: 3}
       quantity: 2
-    isCompleted: 1
-    isPlayable: 1
-    achivement: 3
+    isCompleted: 0
+    isPlayable: 0
+    achivement: 0
   - objects:
     - spawnObject: {fileID: 1102256822763534515, guid: 2c9ac2ac2889dc04ca6829a53384077a, type: 3}
       quantity: 2
     - spawnObject: {fileID: 104555627654016150, guid: 796ef2391bfb0a84e99b686c3155e46e, type: 3}
       quantity: 1
-    isCompleted: 1
-    isPlayable: 1
-    achivement: 3
+    isCompleted: 0
+    isPlayable: 0
+    achivement: 0
   - objects:
     - spawnObject: {fileID: 1102256822763534515, guid: 2c9ac2ac2889dc04ca6829a53384077a, type: 3}
       quantity: 3
     - spawnObject: {fileID: 104555627654016150, guid: 796ef2391bfb0a84e99b686c3155e46e, type: 3}
       quantity: 2
-    isCompleted: 1
-    isPlayable: 1
-    achivement: 1
+    isCompleted: 0
+    isPlayable: 0
+    achivement: 0
   - objects:
     - spawnObject: {fileID: 1102256822763534515, guid: 2c9ac2ac2889dc04ca6829a53384077a, type: 3}
       quantity: 4
     - spawnObject: {fileID: 104555627654016150, guid: 796ef2391bfb0a84e99b686c3155e46e, type: 3}
       quantity: 4
-    isCompleted: 1
-    isPlayable: 1
-    achivement: 3
+    isCompleted: 0
+    isPlayable: 0
+    achivement: 0
   - objects:
     - spawnObject: {fileID: 1102256822763534515, guid: 2c9ac2ac2889dc04ca6829a53384077a, type: 3}
       quantity: 3
     - spawnObject: {fileID: 104555627654016150, guid: 8e939d13a524ad14f895d15928f14832, type: 3}
       quantity: 1
     isCompleted: 0
-    isPlayable: 1
+    isPlayable: 0
     achivement: 0
   - objects:
     - spawnObject: {fileID: 1102256822763534515, guid: 2c9ac2ac2889dc04ca6829a53384077a, type: 3}
@@ -64,9 +64,9 @@ MonoBehaviour:
       quantity: 2
     - spawnObject: {fileID: 104555627654016150, guid: 8e939d13a524ad14f895d15928f14832, type: 3}
       quantity: 1
-    isCompleted: 1
-    isPlayable: 1
-    achivement: 3
+    isCompleted: 0
+    isPlayable: 0
+    achivement: 0
   - objects:
     - spawnObject: {fileID: 1102256822763534515, guid: 2c9ac2ac2889dc04ca6829a53384077a, type: 3}
       quantity: 3

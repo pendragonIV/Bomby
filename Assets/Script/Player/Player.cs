@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -12,8 +11,6 @@ public class Player : MonoBehaviour
     private Vector3 mousePos;
     [SerializeField]
     private Vector3 defaultPos;
-    [SerializeField]
-    private float speed = 300f;
     [SerializeField]
     private float forceMultiplier = 250f;
 
@@ -31,6 +28,11 @@ public class Player : MonoBehaviour
     private GameObject supportPlate;
     private bool isShoot = false;
     private bool isGrounded = false;
+    private bool isPull = false;
+
+    Vector2 dir;
+    Vector3 pos;
+
     private void Start()
     {
         rubberBand.enabled = false;
@@ -41,7 +43,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if(transform.position.x > slingShoot.transform.position.x)
+        if (transform.position.x > slingShoot.transform.position.x)
         {
             transform.localScale = new Vector3(-1.5f, 1.5f, 1);
         }
@@ -50,7 +52,7 @@ public class Player : MonoBehaviour
             transform.localScale = new Vector3(1.5f, 1.5f, 1);
         }
 
-        if (transform.position.y < -4f && !GameManager.instance.isGameLose())
+        if (transform.position.y < -4f && !GameManager.instance.isGameLose() && !GameManager.instance.IsGameWin())
         {
             GameManager.instance.Lose();
         }
@@ -60,7 +62,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Base"))
         {
-            if(!isGrounded && this.rb.velocity.magnitude <= .5f && isShoot)
+            if (!isGrounded && this.rb.velocity.magnitude <= .5f && isShoot && !GameManager.instance.isGameLose() && !GameManager.instance.IsGameWin())
             {
                 isGrounded = true;
                 StartCoroutine(WaitToLose());
@@ -79,10 +81,10 @@ public class Player : MonoBehaviour
         if (!isShoot)
         {
             rb.freezeRotation = true;
-            defaultPos = transform.position;
 
             slingShoot.GetComponent<SpriteRenderer>().sprite = pullImg;
             animator.Play("Aim");
+            isPull = true;
         }
     }
 
@@ -93,17 +95,35 @@ public class Player : MonoBehaviour
             rubberBand.enabled = true;
             rubberBandBehind.enabled = true;
             supportPlate.SetActive(true);
-            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 dir = (pos - transform.position).normalized;
-            rb.velocity = new Vector2(dir.x * speed, dir.y * speed);
+            var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
+
+            if (Vector2.Distance(mousePos, slingShoot.transform.position) > 6f)
+            {
+                var direction = mousePos - slingShoot.transform.position;
+                direction = Vector2.ClampMagnitude(direction, 6f);
+                pos = slingShoot.transform.position + direction;
+            }
+            else
+            {
+                pos = mousePos;
+            }
             SetbandPos();
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (isPull)
+        {
+            rb.MovePosition(pos);
+
         }
     }
 
     private void SetbandPos()
     {
-        if(transform.position.x > slingShoot.transform.position.x)
+        if (transform.position.x > slingShoot.transform.position.x)
         {
             rubberBand.SetPosition(0, new Vector3(transform.position.x + .25f, transform.position.y - .25f));
             rubberBand.SetPosition(1, new Vector3(slingShoot.transform.position.x + .3f, slingShoot.transform.position.y + .35f));
@@ -126,7 +146,7 @@ public class Player : MonoBehaviour
         if (!isShoot)
         {
             rb.velocity = Vector2.zero;
-            Vector2 dir = -(transform.position - defaultPos);
+            Vector2 dir = -(transform.position - slingShoot.transform.position);
 
             rb.AddForce(dir * forceMultiplier);
             rb.freezeRotation = false;
@@ -137,6 +157,7 @@ public class Player : MonoBehaviour
             supportPlate.SetActive(false);
             isShoot = true;
             animator.Play("Flying");
+            isPull = false;
         }
     }
 }

@@ -1,6 +1,5 @@
 using DG.Tweening;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,7 +31,7 @@ public class GameScene : MonoBehaviour
     {
         Transform holder = objectHolderContainer.GetChild(index);
         holder.GetChild(0).GetComponent<Text>().text = quantity.ToString();
-        if(quantity == 0)
+        if (quantity == 0)
         {
             holder.GetComponent<Image>().color = disabledColor;
             holder.GetComponent<CanvasGroup>().interactable = false;
@@ -46,7 +45,7 @@ public class GameScene : MonoBehaviour
         pausePanel.gameObject.SetActive(true);
         FadeIn(overlayPanel.GetComponent<CanvasGroup>(), pausePanel.GetComponent<RectTransform>());
         ingameMenuButton.interactable = false;
-        Time.timeScale = 0; 
+        Time.timeScale = 0;
     }
 
     public void HidePausePanel()
@@ -76,10 +75,10 @@ public class GameScene : MonoBehaviour
     private IEnumerator SetAchive(Transform achiveParent)
     {
         Transform achiveContainer = achiveParent.GetChild(1);
-        for(int i = 0; i < achiveContainer.childCount; i++)
+        for (int i = 0; i < achiveContainer.childCount; i++)
         {
             yield return new WaitForSecondsRealtime(.3f);
-            if(i < GameManager.instance.achivement)
+            if (i < GameManager.instance.achivement)
             {
                 Transform star = achiveContainer.GetChild(i);
                 SetStar(star);

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnObjectController : MonoBehaviour
@@ -18,7 +16,7 @@ public class SpawnObjectController : MonoBehaviour
 
     private void Awake()
     {
-        if(instance != this && instance != null)
+        if (instance != this && instance != null)
         {
             Destroy(gameObject);
         }
@@ -38,7 +36,7 @@ public class SpawnObjectController : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
-            if(draggingObj != null)
+            if (draggingObj != null)
             {
                 GameObject placeObj = draggingObj;
                 ObjectSpawner.instance.PlaceObj(mouseCellPos, placeObj, objectContainer.transform);

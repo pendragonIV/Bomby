@@ -12,7 +12,7 @@ public class DontDestroy : MonoBehaviour
 
     private void Start()
     {
-        for(int i = 0; i < Object.FindObjectsOfType<DontDestroy>().Length; i++)
+        for (int i = 0; i < Object.FindObjectsOfType<DontDestroy>().Length; i++)
         {
             if (Object.FindObjectsOfType<DontDestroy>()[i].ID == ID && Object.FindObjectsOfType<DontDestroy>()[i] != this)
             {

@@ -1,14 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 public class ObjectSpawner : MonoBehaviour
 {
     public static ObjectSpawner instance;
     private void Awake()
     {
-        if(instance != this && instance != null)
+        if (instance != this && instance != null)
         {
             Destroy(gameObject);
         }
@@ -24,9 +21,9 @@ public class ObjectSpawner : MonoBehaviour
         {
             placeObject.GetComponent<Collider2D>().enabled = true;
             placeObject.GetComponent<Rigidbody2D>().simulated = true;
-            placeObject.GetComponent<SpriteRenderer>().color = new Color(1,1,1,1);
+            placeObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
 
-            if(GameManager.instance.currentDragIndex != -1)
+            if (GameManager.instance.currentDragIndex != -1)
             {
                 if (GameManager.instance.currentLevelObjs[GameManager.instance.currentDragIndex].quantity > 0)
                 {

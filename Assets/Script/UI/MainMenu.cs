@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using DG.Tweening;
-using UnityEngine.UI;
+using System.Collections;
+using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
@@ -33,9 +31,9 @@ public class MainMenu : MonoBehaviour
     {
         StartCoroutine(FadeOut(tutorPanel.GetComponent<CanvasGroup>(), guideLine.GetComponent<RectTransform>()));
 
-    }   
+    }
 
-    private void FadeIn(CanvasGroup canvasGroup ,RectTransform rectTransform)
+    private void FadeIn(CanvasGroup canvasGroup, RectTransform rectTransform)
     {
         canvasGroup.alpha = 0f;
         canvasGroup.DOFade(1, .3f).SetUpdate(true);

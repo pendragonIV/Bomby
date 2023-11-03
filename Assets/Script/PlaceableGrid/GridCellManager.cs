@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEngine.UIElements;
 
 public class GridCellManager : MonoBehaviour
 {
@@ -15,7 +11,7 @@ public class GridCellManager : MonoBehaviour
 
     private void Awake()
     {
-        if(instance != this && instance != null)
+        if (instance != this && instance != null)
         {
             Destroy(gameObject);
         }
