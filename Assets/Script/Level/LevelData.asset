@@ -16,12 +16,18 @@ MonoBehaviour:
   - objects:
     - spawnObject: {fileID: 1102256822763534515, guid: 2c9ac2ac2889dc04ca6829a53384077a, type: 3}
       quantity: 1
+    blockingObjects: []
+    nestPosition: {x: 5.8, y: -1.6}
     isCompleted: 0
     isPlayable: 1
     achivement: 0
   - objects:
     - spawnObject: {fileID: 1102256822763534515, guid: 2c9ac2ac2889dc04ca6829a53384077a, type: 3}
       quantity: 2
+    blockingObjects:
+    - blockingObject: {fileID: 104555627654016150, guid: 796ef2391bfb0a84e99b686c3155e46e, type: 3}
+      cellPos: {x: 0, y: -3, z: 0}
+    nestPosition: {x: 7, y: -1.6}
     isCompleted: 0
     isPlayable: 0
     achivement: 0
@@ -30,6 +36,14 @@ MonoBehaviour:
       quantity: 2
     - spawnObject: {fileID: 104555627654016150, guid: 796ef2391bfb0a84e99b686c3155e46e, type: 3}
       quantity: 1
+    blockingObjects:
+    - blockingObject: {fileID: 104555627654016150, guid: 796ef2391bfb0a84e99b686c3155e46e, type: 3}
+      cellPos: {x: 3, y: -3, z: 0}
+    - blockingObject: {fileID: 104555627654016150, guid: 796ef2391bfb0a84e99b686c3155e46e, type: 3}
+      cellPos: {x: 3, y: -2, z: 0}
+    - blockingObject: {fileID: 104555627654016150, guid: 796ef2391bfb0a84e99b686c3155e46e, type: 3}
+      cellPos: {x: 4, y: -3, z: 0}
+    nestPosition: {x: 8, y: -1.6}
     isCompleted: 0
     isPlayable: 0
     achivement: 0
@@ -38,6 +52,14 @@ MonoBehaviour:
       quantity: 3
     - spawnObject: {fileID: 104555627654016150, guid: 796ef2391bfb0a84e99b686c3155e46e, type: 3}
       quantity: 2
+    blockingObjects:
+    - blockingObject: {fileID: 104555627654016150, guid: 796ef2391bfb0a84e99b686c3155e46e, type: 3}
+      cellPos: {x: -2, y: -3, z: 0}
+    - blockingObject: {fileID: 104555627654016150, guid: 796ef2391bfb0a84e99b686c3155e46e, type: 3}
+      cellPos: {x: -1, y: -3, z: 0}
+    - blockingObject: {fileID: 104555627654016150, guid: 796ef2391bfb0a84e99b686c3155e46e, type: 3}
+      cellPos: {x: 0, y: -3, z: 0}
+    nestPosition: {x: 6, y: -1.6}
     isCompleted: 0
     isPlayable: 0
     achivement: 0
@@ -46,6 +68,14 @@ MonoBehaviour:
       quantity: 4
     - spawnObject: {fileID: 104555627654016150, guid: 796ef2391bfb0a84e99b686c3155e46e, type: 3}
       quantity: 4
+    blockingObjects:
+    - blockingObject: {fileID: 104555627654016150, guid: 796ef2391bfb0a84e99b686c3155e46e, type: 3}
+      cellPos: {x: 4, y: -3, z: 0}
+    - blockingObject: {fileID: 104555627654016150, guid: 796ef2391bfb0a84e99b686c3155e46e, type: 3}
+      cellPos: {x: 5, y: -3, z: 0}
+    - blockingObject: {fileID: 104555627654016150, guid: 8e939d13a524ad14f895d15928f14832, type: 3}
+      cellPos: {x: 6, y: -2, z: 0}
+    nestPosition: {x: 6.5, y: -1.6}
     isCompleted: 0
     isPlayable: 0
     achivement: 0
@@ -54,6 +84,12 @@ MonoBehaviour:
       quantity: 3
     - spawnObject: {fileID: 104555627654016150, guid: 8e939d13a524ad14f895d15928f14832, type: 3}
       quantity: 1
+    blockingObjects:
+    - blockingObject: {fileID: 104555627654016150, guid: 796ef2391bfb0a84e99b686c3155e46e, type: 3}
+      cellPos: {x: 0, y: -3, z: 0}
+    - blockingObject: {fileID: 104555627654016150, guid: 8e939d13a524ad14f895d15928f14832, type: 3}
+      cellPos: {x: 1, y: -2, z: 0}
+    nestPosition: {x: 8, y: -1.6}
     isCompleted: 0
     isPlayable: 0
     achivement: 0
@@ -64,6 +100,12 @@ MonoBehaviour:
       quantity: 2
     - spawnObject: {fileID: 104555627654016150, guid: 8e939d13a524ad14f895d15928f14832, type: 3}
       quantity: 1
+    blockingObjects:
+    - blockingObject: {fileID: 104555627654016150, guid: 8e939d13a524ad14f895d15928f14832, type: 3}
+      cellPos: {x: 4, y: -3, z: 0}
+    - blockingObject: {fileID: 104555627654016150, guid: 8e939d13a524ad14f895d15928f14832, type: 3}
+      cellPos: {x: 2, y: -3, z: 0}
+    nestPosition: {x: 5.9, y: -1.6}
     isCompleted: 0
     isPlayable: 0
     achivement: 0
@@ -72,6 +114,14 @@ MonoBehaviour:
       quantity: 3
     - spawnObject: {fileID: 104555627654016150, guid: 8e939d13a524ad14f895d15928f14832, type: 3}
       quantity: 3
+    blockingObjects:
+    - blockingObject: {fileID: 104555627654016150, guid: 8e939d13a524ad14f895d15928f14832, type: 3}
+      cellPos: {x: 6, y: -2, z: 0}
+    - blockingObject: {fileID: 104555627654016150, guid: 796ef2391bfb0a84e99b686c3155e46e, type: 3}
+      cellPos: {x: 6, y: 0, z: 0}
+    - blockingObject: {fileID: 104555627654016150, guid: 796ef2391bfb0a84e99b686c3155e46e, type: 3}
+      cellPos: {x: 7, y: 0, z: 0}
+    nestPosition: {x: 7.5, y: -1.6}
     isCompleted: 0
     isPlayable: 0
     achivement: 0
@@ -82,6 +132,14 @@ MonoBehaviour:
       quantity: 2
     - spawnObject: {fileID: 104555627654016150, guid: 8e939d13a524ad14f895d15928f14832, type: 3}
       quantity: 2
+    blockingObjects:
+    - blockingObject: {fileID: 104555627654016150, guid: 8e939d13a524ad14f895d15928f14832, type: 3}
+      cellPos: {x: 1, y: -2, z: 0}
+    - blockingObject: {fileID: 104555627654016150, guid: 8e939d13a524ad14f895d15928f14832, type: 3}
+      cellPos: {x: 3, y: -2, z: 0}
+    - blockingObject: {fileID: 104555627654016150, guid: 796ef2391bfb0a84e99b686c3155e46e, type: 3}
+      cellPos: {x: 0, y: -3, z: 0}
+    nestPosition: {x: 6.8, y: -1.6}
     isCompleted: 0
     isPlayable: 0
     achivement: 0
@@ -92,6 +150,14 @@ MonoBehaviour:
       quantity: 4
     - spawnObject: {fileID: 104555627654016150, guid: 8e939d13a524ad14f895d15928f14832, type: 3}
       quantity: 3
+    blockingObjects:
+    - blockingObject: {fileID: 1102256822763534515, guid: 2c9ac2ac2889dc04ca6829a53384077a, type: 3}
+      cellPos: {x: 0, y: -3, z: 0}
+    - blockingObject: {fileID: 104555627654016150, guid: 796ef2391bfb0a84e99b686c3155e46e, type: 3}
+      cellPos: {x: 1, y: -3, z: 0}
+    - blockingObject: {fileID: 104555627654016150, guid: 8e939d13a524ad14f895d15928f14832, type: 3}
+      cellPos: {x: 2, y: -2, z: 0}
+    nestPosition: {x: 8, y: -1.6}
     isCompleted: 0
     isPlayable: 0
     achivement: 0

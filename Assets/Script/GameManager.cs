@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     public SceneChanger sceneChanger;
     public GameScene gameScene;
+    public GameObject nest;
     #region Game status
     [SerializeField]
     private bool isGameWin = false;
@@ -44,8 +45,14 @@ public class GameManager : MonoBehaviour
         {
             currentLevelObjs.Add(new LevelObject(obj.spawnObject, obj.quantity));
         });
-
         IngameHolderInit(currentLevelData);
+
+        nest.transform.position = currentLevelData.nestPosition;
+        currentLevelData.blockingObjects.ForEach(obj =>
+        {
+            GameObject blockingObj = Instantiate(obj.blockingObject);
+            blockingObj.transform.position = GridCellManager.instance.PositonToSpawn(obj.cellPos);
+        });
 
         Time.timeScale = 1;
     }

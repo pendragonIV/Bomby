@@ -83,15 +83,17 @@ public class LevelData : ScriptableObject
     #endregion
 }
 
-[System.Serializable]
+[Serializable]
 public class Level
 {
     public List<LevelObject> objects;
+    public List<BlockingObject> blockingObjects;
+    public Vector2 nestPosition;
     public bool isCompleted;
     public bool isPlayable;
     public int achivement;
 }
-[System.Serializable]
+[Serializable]
 public class LevelObject
 {
     public GameObject spawnObject;
@@ -102,6 +104,12 @@ public class LevelObject
         this.spawnObject = spawnObject;
         this.quantity = quantity;
     }
+}
+[Serializable]
+public class BlockingObject
+{
+    public GameObject blockingObject;
+    public Vector3Int cellPos;
 }
 
 public static class JsonHelper

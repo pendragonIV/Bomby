@@ -14,7 +14,7 @@ public class Nest : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (collision.GetComponent<Rigidbody2D>().velocity.magnitude < 10f && !GameManager.instance.isGameLose() && !GameManager.instance.IsGameWin())
+            if (!GameManager.instance.isGameLose() && !GameManager.instance.IsGameWin())
             {
                 collision.transform.parent = transform;
                 collision.GetComponent<Rigidbody2D>().velocity = Vector2.zero;

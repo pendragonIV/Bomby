@@ -41,5 +41,4 @@ public class GridCellManager : MonoBehaviour
     {
         return tileMap.GetCellCenterWorld(cellPosition);
     }
-
 }

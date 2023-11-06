@@ -15,6 +15,14 @@ public class ObjectSpawner : MonoBehaviour
         }
     }
 
+    //private void Update()
+    //{
+    //    if (Input.GetMouseButtonDown(0))
+    //    {
+    //        Debug.Log(GridCellManager.instance.GetMouseCell(Input.mousePosition));
+    //    }
+    //}
+
     public void PlaceObj(Vector3Int spawnPos, GameObject placeObject, Transform parent)
     {
         if (GridCellManager.instance.IsPlaceableArea(spawnPos))
